@@ -1,8 +1,65 @@
-spring:
-  application:
-    name: concise-server
 server:
   port: 8080
   servlet:
     context-path: /api
-  
+spring:
+  web:
+    resources:
+      # 前后端分离,不为/resources/**建立映射
+      add-mappings: false
+  mvc:
+    # 没有找到处理器时直接抛异常
+    throw-exception-if-no-handler-found: true
+
+  application:
+    name: concise-server
+  redis:
+    host: localhost
+    port: 6379
+    password: '@Wasd135139'
+    database: 0
+    lettuce:
+      pool:
+        min-idle: 8
+        max-active: 24
+        max-idle: 24
+  session:
+    store-type: redis
+    timeout: 1d
+    redis:
+      namespace: "flat:session"
+  cache:
+    type: REDIS
+    redis:
+      key-prefix: "flat:cache"
+      time-to-live: 1D
+
+business:
+  cors:
+    "[/**]":
+      allowed-origin-patterns: "*"
+      allow-credentials: true
+      allowed-headers: "*"
+      allowed-methods: "*"
+  auth:
+    # 免鉴权的接口
+    permit-all:
+      - method: GET
+        patterns:
+          - /password/publicKey/**
+          - /system/setting/**
+          - /captcha/**
+          - /simple/**
+          - /rbac/**
+      - method: POST
+        patterns:
+          - /simple/**
+          - /login
+
+    token:
+      jwt:
+        signature: 123456789101234567891012345678910
+        access-token-ttl: 1d
+        refresh-token-ttl: 7d
+  exception:
+    exception-code-response: false
