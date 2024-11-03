@@ -140,6 +140,6 @@ public class JwtTokenManager implements TokenManager {
 
     @Override
     public void revoke(String accessToken) {
-
+        log.info("revoke:{}", accessToken);
     }
 }
