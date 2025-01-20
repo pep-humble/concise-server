@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "domain.ip",
+      "type": "java.lang.String",
+      "description": "Description for domain.ip."
+    },
+    {
+      "name": "domain.password",
+      "type": "java.lang.String",
+      "description": "Description for domain.password."
+    }
+  ]
+}
