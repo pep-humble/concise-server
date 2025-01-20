@@ -1,6 +1,6 @@
 package com.pep.platform.rbac.listener;
 
-import com.pep.platform.tree.BaseTreeIdEntity;
+import com.pep.platform.tree.entity.BaseTreeIdEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 

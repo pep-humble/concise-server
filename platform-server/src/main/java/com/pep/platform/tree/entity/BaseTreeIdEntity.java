@@ -1,4 +1,4 @@
-package com.pep.platform.tree;
+package com.pep.platform.tree.entity;
 
 import org.apache.commons.lang3.StringUtils;
 

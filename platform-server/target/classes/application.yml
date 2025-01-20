@@ -2,9 +2,9 @@ domain:
   ip: localhost
   password: '@Wasd135139'
 server:
-  port: 8080
+  port: 8001
   servlet:
-    context-path: /platform
+    context-path: /admin/base/open/eps
 spring:
   application:
     name: platform-server

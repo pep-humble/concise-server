@@ -1,7 +1,7 @@
 package com.pep.platform.rbac.entity;
 
 import com.pep.common.persistent.entity.BaseEntity;
-import com.pep.platform.tree.BaseTreeIdEntity;
+import com.pep.platform.tree.entity.BaseTreeIdEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
