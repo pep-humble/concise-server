@@ -20,5 +20,5 @@ public enum GenderEnum {
     /**
      * 不方便透露
      */
-    NOT_DISCLOSED;
+    NOT_DISCLOSED
 }
