@@ -1,0 +1,17 @@
+domain:
+  ip: localhost
+  password: '@Wasd135139'
+server:
+  port: 8888
+  servlet:
+    context-path: /auth
+spring:
+  application:
+    name: auth-server
+  profiles:
+    include:
+      - mysql
+      - redis
+  datasource:
+    hikari:
+      catalog: concise-auth

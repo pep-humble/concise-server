@@ -1,0 +1,11 @@
+spring:
+  redis:
+    lettuce:
+      pool:
+        min-idle: 8
+        max-active: 24
+        max-idle: 24
+    host: ${domain.ip}
+    port: 6379
+    password: ${domain.password}
+    database: 0
