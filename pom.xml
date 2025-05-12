@@ -22,16 +22,11 @@
         </developer>
     </developers>
 
-    <modules>
-        <module>common-server</module>
-        <module>platform-server</module>
-        <module>auth-server</module>
-    </modules>
-
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2021.0.8</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.6.0</spring-cloud-alibaba.version>
         <base-common.version>0.0.1-SNAPSHOT</base-common.version>
     </properties>
 
@@ -41,6 +36,13 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
